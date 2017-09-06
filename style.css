@@ -41,3 +41,33 @@
     /* width: 29%; */
     /* margin-left: 1%; */
 }
+
+.algolia-autocomplete{
+	position: relative;
+    /* display: inline-block; */
+    direction: ltr;
+}
+#algolia-autocomplete-listbox-0{
+	 position: absolute;
+    top: 100%;
+    z-index: 100;
+    /* left: 0px; */
+    right: auto;
+    display: block;
+    width: 496px;
+    margin-top: 54px;
+}
+.tourmaster-quick-search-shortcode input[type="submit"] {
+    font-size: 15px;
+    letter-spacing: 0px;
+    text-align: center!important;
+    font-weight: 500;
+    text-transform: none;
+    float: left;
+    height: 53px;
+    /* width: 29%; */
+    /* margin-left: 1%; */
+    padding-right: 15px;
+    padding-left: 15px;
+}
+}
