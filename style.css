@@ -28,3 +28,16 @@
   margin-bottom: 1em;
   border-bottom: 1px solid #ccc;
 }
+
+//Search BTN
+.tourmaster-quick-search-shortcode input[type="submit"] {
+    font-size: 15px;
+    letter-spacing: 0px;
+    text-align: center!important;
+    font-weight: 600;
+    text-transform: none;
+    float: left;
+    height: 53px;
+    /* width: 29%; */
+    /* margin-left: 1%; */
+}
