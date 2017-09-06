@@ -1,22 +1,7 @@
-/*
- Theme Name:   Travel Tour Child
- Theme URI:    http://demo.goodlayers.com/infinite
- Description:  Goodlayers Travel Tour Child Theme
- Author:       Goodlayers
- Author URI:   http://goodlayers.com
- Template:     traveltour
- Version:      1.0.0
- License:      GNU General Public License v2 or later
- License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Tags:         light, dark, right-sidebar, responsive-layout
- Text Domain:  traveltour-child
-
- START YOUR CHILD THEME CSS HERE
-*/
 .algolia-autocomplete {
   width: 100%;
 }
-.ad-example-dropdown-menu {
+.search-result-dropdown-menu {
   width: 100%;
   color: black;
   background-color: #fff;
@@ -26,30 +11,18 @@
   padding: .5em;
   box-shadow: 1px 1px 32px -10px rgba(0,0,0,0.62);
 }
-.ad-example-dropdown-menu .ad-example-suggestion {
-  cursor: pointer;
-  padding-left: 15px;
-  padding-right: 5px;
-  padding-bottom: 5px;
-}
-.ad-example-dropdown-menu .ad-example-suggestion img {
-  height: 2em;
-  margin-top: .5em;
-  margin-right: 10px;
-  float: left;
-}
-.ad-example-dropdown-menu .ad-example-suggestion small {
+.search-result-dropdown-menu .search-result-suggestion small {
   font-size: .8em;
   color: #bbb;
 }
-.ad-example-dropdown-menu .ad-example-suggestion.ad-example-cursor {
+.search-result-dropdown-menu .search-result-suggestion.search-result-cursor {
   background-color: #B2D7FF;
 }
-.ad-example-dropdown-menu .ad-example-suggestion em {
+.search-result-dropdown-menu .search-result-suggestion em {
   font-weight: bold;
   font-style: normal;
 }
-.ad-example-header {
+.search-result-header {
   font-weight: bold;
   padding: .5em 0;
   margin-bottom: 1em;

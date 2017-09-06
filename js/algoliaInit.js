@@ -15,37 +15,48 @@
     var searchBox = jQuery('.tourmaster-quick-search-shortcode')[0];
 
     var rentalsDataset = {
-    source: autocomplete.sources.hits(index, {hitsPerPage: 3}),
-    displayKey: 'name',
-    name: 'tours',
+    source: autocomplete.sources.hits(destinations, {hitsPerPage: 6}),
+    displayKey: 'city',
     templates: {
-      header: '<div class="ad-example-header">Tours</div>',
+      header: '<div class="row search-result-header">Destinos</div>',
       suggestion: function(suggestion) {
         console.log(suggestion);
-        return '<a href="/tour/' + suggestion.slug + '"><div class="ad-example-suggestion">' +
-          '<div class="row"><div class="col-md-5" style="background-image:url('+suggestion.fields.images[0].secure_url+');background-position: center;background-size: cover;height: 6em;"></div>' +
-          '<div class="col-md-7">' +
-             suggestion._highlightResult.name.value + '<br />' +
-            '<p style="color:#666"><i class="fa fa-money" style="color:#8a7676"></i> ' + suggestion.fields.price + '$ <i class="fa fa-clock-o col-xs-offset-2" style="color:#8a7676"></i> ' + suggestion.fields.duration + ' horas</p>' +
-          '</div></a>';
+        var thumb = getSmallImageFromUrl(suggestion.image);
+        return '<div class="col-md-4"><a href="/destino/'+suggestion.slug+'">' +
+          '<img class="result-img" src="' + thumb + '" />' +
+          '<div>' +
+            suggestion._highlightResult.city.value + ", "+ suggestion._highlightResult.country.value +'<br />' +
+            '<small>' + suggestion._highlightResult.city.value + '</small>, ' +  '<small>' + suggestion._highlightResult.country.value + '</small>' +
+          '</div>' +
+          '</a></div>';
       }
     }
   };
 
-    var placesDataset = placesAutocompleteDataset({
-    countries: ['pa'],
-    algoliasearch: algoliasearch,
+  var regionsDataset = {
+    source: autocomplete.sources.hits(regions, {hitsPerPage: 3}),
+    displayKey: 'province',
     templates: {
-      header: '<div class="ad-example-header">Destinos</div>'
-    },
-    hitsPerPage: 3
-  });
+      header: '<div class="row search-result-header">Regiones</div>',
+      suggestion: function(suggestion) {
+        console.log(suggestion);
+        var thumb = getSmallImageFromUrl(suggestion.image);
+        return '<div class="col-md-4"><a href="/destination/'+suggestion.slug+'">' +
+          '<img class="result-img" src="' + thumb + '" />' +
+          '<div>' +
+            suggestion._highlightResult.province.value + ", "+ suggestion._highlightResult.country.value +'<br />' +
+            '<small>' + suggestion._highlightResult.province.value + '</small>, ' +  '<small>' + suggestion._highlightResult.country.value + '</small>' +
+          '</div>' +
+          '</a></div>';
+      }
+    }
+  };
 
   // init
   var autocompleteInstance = autocomplete(searchBox, {
     hint: false,
     debug: true,
-    cssClasses: {prefix: 'ad-example'}
+    cssClasses: {prefix: 'search-result'}
     }, [
     rentalsDataset, placesDataset
   ]);
