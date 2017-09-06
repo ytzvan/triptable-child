@@ -14,7 +14,7 @@
 	{
 	    // or
 	    // Register the script like this for a theme:
-	    wp_register_script( 'algoliaSearch', get_template_directory_uri() . '/js/algoliaSearch.js', true );
+	    wp_register_script( 'algoliaSearch', get_template_directory_uri() . '/js/algoliaSearch.js', $in_footer = true );
 	    wp_enqueue_script( 'algoliaSearch' );
 	 
 	}
