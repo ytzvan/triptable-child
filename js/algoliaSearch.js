@@ -16,5 +16,3 @@ jQuery.loadScript("https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.mi
     	debug: true
   	});
 };
-jQuery.loadScript("https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.js");
-jQuery.loadScript("https://cdn.jsdelivr.net/places.js/1/placesAutocompleteDataset.min.js");
