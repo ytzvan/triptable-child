@@ -12,7 +12,7 @@
 	// }	
 	function include_js_scripts()
 	{
-		$ver = rand(1,10);
+		$ver = rand(1,100);
 	    // or
 	    // Register the script like this for a theme:
 		wp_enqueue_script( 'algoliaSearchLiteLib', 'https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js', array (), false, true);
