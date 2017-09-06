@@ -23,7 +23,7 @@
       suggestion: function(suggestion) {
         console.log(suggestion);
         return '<div class="col-md-4"><a href="/destino/'+suggestion.slug+'">' +
-          '<img class="result-img" src="' + suggestion._highlightResult.city.image + '" />' +
+          '<img class="result-img" src="' + suggestion._highlightResult.city.image.url + '" />' +
           '<div>' +
             suggestion._highlightResult.city.value + ", "+ suggestion._highlightResult.country.value +'<br />' +
             '<small>' + suggestion._highlightResult.city.value + '</small>, ' +  '<small>' + suggestion._highlightResult.country.value + '</small>' +
@@ -41,7 +41,7 @@
       suggestion: function(suggestion) {
         console.log(suggestion);
         return '<div class="col-md-4"><a href="/destination/'+suggestion.slug+'">' +
-          '<img class="result-img" src="' + suggestion._highlightResult.province.image + '" />' +
+          '<img class="result-img" src="' + suggestion._highlightResult.province.image.url + '" />' +
           '<div>' +
             suggestion._highlightResult.province.value + ", "+ suggestion._highlightResult.country.value +'<br />' +
             '<small>' + suggestion._highlightResult.province.value + '</small>, ' +  '<small>' + suggestion._highlightResult.country.value + '</small>' +
