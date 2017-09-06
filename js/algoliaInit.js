@@ -9,13 +9,15 @@
 
 jQuery.loadScript("https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.js");
 jQuery.loadScript("https://cdn.jsdelivr.net/places.js/1/placesAutocompleteDataset.min.js");
-jQuery.loadScript("https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"), function(){
+jQuery.loadScript("https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"), initSearch();
 
-	var client = algoliasearch('CLO2E2RKP1', 'bf4587ef5d150368765803e8c74440d0');
-  	var index = client.initIndex('tours');
-  	var searchBox = jQuery('input[name=tour-search]')[0];
+function initSearch() {
 
-  	var rentalsDataset = {
+  var client = algoliasearch('CLO2E2RKP1', 'bf4587ef5d150368765803e8c74440d0');
+    var index = client.initIndex('tours');
+    var searchBox = jQuery('input[name=tour-search]')[0];
+
+    var rentalsDataset = {
     source: autocomplete.sources.hits(index, {hitsPerPage: 3}),
     displayKey: 'name',
     name: 'tours',
@@ -33,7 +35,7 @@ jQuery.loadScript("https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.mi
     }
   };
 
-  	var placesDataset = placesAutocompleteDataset({
+    var placesDataset = placesAutocompleteDataset({
     countries: ['pa'],
     algoliasearch: algoliasearch,
     templates: {
@@ -47,9 +49,9 @@ jQuery.loadScript("https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.mi
     hint: false,
     debug: true,
     cssClasses: {prefix: 'ad-example'}
-  	}, [
+    }, [
     rentalsDataset, placesDataset
   ]);
-};
+};s
 
 
