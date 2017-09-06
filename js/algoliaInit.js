@@ -12,7 +12,7 @@
 
     var client = algoliasearch('CLO2E2RKP1', 'bf4587ef5d150368765803e8c74440d0');
     var index = client.initIndex('tours');
-    var searchBox = jQuery('input[name=tour-search]')[0];
+    var searchBox = jQuery('.tourmaster-quick-search-shortcode')[0];
 
     var rentalsDataset = {
     source: autocomplete.sources.hits(index, {hitsPerPage: 3}),
