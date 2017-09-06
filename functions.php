@@ -15,7 +15,8 @@
 	    // or
 	    // Register the script like this for a theme:
 	    wp_register_script( 'algoliaSearch', get_stylesheet_directory_uri() . '/js/algoliaSearch.js', array (), true, true);
-	    wp_enqueue_script( 'algoliaSearch' );
+	    wp_register_script( 'algoliaInit', get_stylesheet_directory_uri() . '/js/algoliaInit.js', array (), true, true);
+	    wp_enqueue_script( 'algoliaInit' );
 	}
 	add_action( 'wp_enqueue_scripts', 'include_js_scripts' );
 ?>
